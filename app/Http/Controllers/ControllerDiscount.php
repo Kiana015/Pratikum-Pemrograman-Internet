@@ -41,7 +41,6 @@ class ControllerDiscount extends Controller
         $discounts->created_at = Carbon::now()->format('Y-m-d H:i:s');
         $discounts->updated_at = Carbon::now()->format('Y-m-d H:i:s');
         $discounts->save();
-
         return redirect('/product')->with('berhasil','Anda Berhasil menambahkan data diskon');
   
     }

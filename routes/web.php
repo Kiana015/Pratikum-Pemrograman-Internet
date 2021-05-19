@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//halaman utama
+Route::get('/', 'UserController@index');
 
 Auth::routes(['verify' => true, 'guest']);
 
@@ -66,7 +65,7 @@ Route::middleware('admin:admin')->group(function(){
   Route::get('admin/logout', 'Auth\AdminAuthController@postLogout');
 });
 
-Route::get('/user', 'UserController@index');
+
 Route::get('/user/show','UserController@showAll');
 Route::get('/user/detail/{id}','UserController@detail');
 
