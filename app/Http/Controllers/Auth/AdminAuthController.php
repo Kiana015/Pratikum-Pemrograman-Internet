@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 class AdminAuthController extends Controller
 {
 	use AuthenticatesUsers;
-
     protected $maxAttempts = 3;
     protected $decayMinutes = 2;
 
